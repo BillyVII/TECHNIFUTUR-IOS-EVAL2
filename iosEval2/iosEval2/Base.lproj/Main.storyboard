@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Page View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomePageViewController" customModule="iosEval2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="ioI-NG-kgU">
+                                <rect key="frame" x="0.0" y="59" width="414" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="4od-Sa-FAV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connexion via:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQU-XR-d0e">
+                                <rect key="frame" x="0.0" y="219" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJD-IK-Gwt">
+                                <rect key="frame" x="140.5" y="340" width="133" height="69"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="google_ico" title="  Google"/>
+                                <connections>
+                                    <action selector="DidSelectedGoogleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YFB-o6-39e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psh-0Y-ORR">
+                                <rect key="frame" x="134.5" y="509" width="145.5" height="69"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="facebook_ico" title=" Facebook"/>
+                                <connections>
+                                    <action selector="DidSelectedFacebookButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G0t-QO-Rih"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ioI-NG-kgU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="15" id="7uC-cG-7v5"/>
+                            <constraint firstItem="ioI-NG-kgU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N8R-NN-s4e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xQU-XR-d0e" secondAttribute="trailing" id="Z0S-WO-b7n"/>
+                            <constraint firstItem="psh-0Y-ORR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cho-vp-kRG"/>
+                            <constraint firstItem="xQU-XR-d0e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jRc-C2-O3f"/>
+                            <constraint firstItem="qJD-IK-Gwt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jmj-cz-Me4"/>
+                            <constraint firstItem="qJD-IK-Gwt" firstAttribute="top" secondItem="xQU-XR-d0e" secondAttribute="bottom" constant="100" id="or4-cM-L4x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ioI-NG-kgU" secondAttribute="trailing" id="wMb-De-O5m"/>
+                            <constraint firstItem="psh-0Y-ORR" firstAttribute="top" secondItem="qJD-IK-Gwt" secondAttribute="bottom" constant="100" id="wVb-Sm-wwW"/>
+                            <constraint firstItem="xQU-XR-d0e" firstAttribute="top" secondItem="ioI-NG-kgU" secondAttribute="bottom" constant="30" id="wzj-iV-xZC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="84"/>
+        </scene>
+        <!--Connection View Controller-->
+        <scene sceneID="zAO-We-dYk">
+            <objects>
+                <viewController storyboardIdentifier="ConnectionViewController" id="LNi-YI-Orc" customClass="ConnectionViewController" customModule="iosEval2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nv5-k9-ero">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VGv-uj-TR4">
+                                <rect key="frame" x="87" y="54" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="mS7-Lc-2I8"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o3V-Qk-0NE">
+                                <rect key="frame" x="10" y="206" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kyj-8y-hcH">
+                                <rect key="frame" x="10" y="265" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JX-4l-CQe">
+                                <rect key="frame" x="10" y="841" width="394" height="31"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Connection">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnConnectionButton:" destination="LNi-YI-Orc" eventType="touchUpInside" id="acJ-oI-a5W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qm-9h-s44">
+                                <rect key="frame" x="353.5" y="54" width="60.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <action selector="didTapOnCloseButton:" destination="LNi-YI-Orc" eventType="touchUpInside" id="Cic-nr-TPb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NtY-VH-U8t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0JX-4l-CQe" firstAttribute="leading" secondItem="NtY-VH-U8t" secondAttribute="leading" constant="10" id="Ao4-ZW-HXA"/>
+                            <constraint firstItem="VGv-uj-TR4" firstAttribute="leading" secondItem="NtY-VH-U8t" secondAttribute="leading" constant="87" id="BbI-MS-hlG"/>
+                            <constraint firstItem="NtY-VH-U8t" firstAttribute="trailing" secondItem="0JX-4l-CQe" secondAttribute="trailing" constant="10" id="KmD-Jq-aaY"/>
+                            <constraint firstItem="NtY-VH-U8t" firstAttribute="trailing" secondItem="3qm-9h-s44" secondAttribute="trailing" id="Ocu-2s-g2a"/>
+                            <constraint firstItem="NtY-VH-U8t" firstAttribute="trailing" secondItem="VGv-uj-TR4" secondAttribute="trailing" constant="87" id="PoM-BY-xKk"/>
+                            <constraint firstItem="kyj-8y-hcH" firstAttribute="leading" secondItem="NtY-VH-U8t" secondAttribute="leading" constant="10" id="Pul-w9-Qxm"/>
+                            <constraint firstItem="o3V-Qk-0NE" firstAttribute="leading" secondItem="NtY-VH-U8t" secondAttribute="leading" constant="10" id="Pvu-cN-eaM"/>
+                            <constraint firstItem="3qm-9h-s44" firstAttribute="top" secondItem="NtY-VH-U8t" secondAttribute="top" constant="10" id="SXJ-Ab-L9Q"/>
+                            <constraint firstItem="0JX-4l-CQe" firstAttribute="bottom" secondItem="NtY-VH-U8t" secondAttribute="bottom" constant="10" id="Zrj-HO-VK5"/>
+                            <constraint firstItem="kyj-8y-hcH" firstAttribute="top" secondItem="o3V-Qk-0NE" secondAttribute="bottom" constant="25" id="dix-IP-Xm8"/>
+                            <constraint firstItem="VGv-uj-TR4" firstAttribute="top" secondItem="NtY-VH-U8t" secondAttribute="top" constant="10" id="fcv-US-lUJ"/>
+                            <constraint firstItem="o3V-Qk-0NE" firstAttribute="top" secondItem="VGv-uj-TR4" secondAttribute="bottom" constant="24" id="k7d-ly-Xyw"/>
+                            <constraint firstItem="NtY-VH-U8t" firstAttribute="trailing" secondItem="o3V-Qk-0NE" secondAttribute="trailing" constant="10" id="neL-gc-U0C"/>
+                            <constraint firstItem="NtY-VH-U8t" firstAttribute="trailing" secondItem="kyj-8y-hcH" secondAttribute="trailing" constant="10" id="vlg-0Q-nrv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageHeader" destination="VGv-uj-TR4" id="Aln-xy-wfp"/>
+                        <outlet property="loginTextField" destination="o3V-Qk-0NE" id="chu-Pn-YdI"/>
+                        <outlet property="mdpTextField" destination="kyj-8y-hcH" id="oLM-A4-aCo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8x-0H-wxU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook_ico" width="55" height="55"/>
+        <image name="google_ico" width="55" height="55"/>
+        <image name="header_pokemon" width="711" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
