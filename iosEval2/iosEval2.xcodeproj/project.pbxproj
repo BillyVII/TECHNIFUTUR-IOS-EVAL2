@@ -14,6 +14,8 @@
 		F144655128B4F0FF00D207B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F144655028B4F0FF00D207B4 /* Assets.xcassets */; };
 		F144655428B4F0FF00D207B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F144655228B4F0FF00D207B4 /* LaunchScreen.storyboard */; };
 		F144655F28B4F6C000D207B4 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F144655E28B4F6C000D207B4 /* ConnectionViewController.swift */; };
+		F144656128B50DCB00D207B4 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F144656028B50DCB00D207B4 /* PokemonViewController.swift */; };
+		F144656328B5100500D207B4 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F144656228B5100500D207B4 /* PickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F144655328B4F0FF00D207B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F144655528B4F0FF00D207B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F144655E28B4F6C000D207B4 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
+		F144656028B50DCB00D207B4 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
+		F144656228B5100500D207B4 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 			children = (
 				F144654B28B4F0FE00D207B4 /* HomePageViewController.swift */,
 				F144655E28B4F6C000D207B4 /* ConnectionViewController.swift */,
+				F144656028B50DCB00D207B4 /* PokemonViewController.swift */,
+				F144656228B5100500D207B4 /* PickerViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -165,7 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F144656328B5100500D207B4 /* PickerViewController.swift in Sources */,
 				F144655F28B4F6C000D207B4 /* ConnectionViewController.swift in Sources */,
+				F144656128B50DCB00D207B4 /* PokemonViewController.swift in Sources */,
 				F144654C28B4F0FE00D207B4 /* HomePageViewController.swift in Sources */,
 				F144654828B4F0FE00D207B4 /* AppDelegate.swift in Sources */,
 				F144654A28B4F0FE00D207B4 /* SceneDelegate.swift in Sources */,

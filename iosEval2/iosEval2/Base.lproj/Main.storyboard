@@ -138,11 +138,140 @@
             </objects>
             <point key="canvasLocation" x="849" y="84"/>
         </scene>
+        <!--Picker View Controller-->
+        <scene sceneID="iWw-MT-If8">
+            <objects>
+                <viewController storyboardIdentifier="PickerViewController" id="HT8-oL-PuV" customClass="PickerViewController" customModule="iosEval2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vtu-sn-Z3I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpO-a6-s1j">
+                                <rect key="frame" x="0.0" y="188" width="414" height="216"/>
+                            </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I82-Ry-zcM">
+                                <rect key="frame" x="20" y="454" width="374" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Z7R-zy-so4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE6-16-SBj">
+                                <rect key="frame" x="169.5" y="794" width="75.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GqV-sO-zka"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GqV-sO-zka" firstAttribute="trailing" secondItem="I82-Ry-zcM" secondAttribute="trailing" constant="20" id="C6G-gI-NtV"/>
+                            <constraint firstItem="HpO-a6-s1j" firstAttribute="top" secondItem="GqV-sO-zka" secondAttribute="top" constant="100" id="IHn-Vd-3kZ"/>
+                            <constraint firstItem="fE6-16-SBj" firstAttribute="centerX" secondItem="Vtu-sn-Z3I" secondAttribute="centerX" id="M7S-GY-5Y3"/>
+                            <constraint firstItem="fE6-16-SBj" firstAttribute="top" secondItem="I82-Ry-zcM" secondAttribute="bottom" constant="40" id="PdZ-TW-BhZ"/>
+                            <constraint firstItem="I82-Ry-zcM" firstAttribute="top" secondItem="HpO-a6-s1j" secondAttribute="bottom" constant="50" id="eeM-gt-hHq"/>
+                            <constraint firstItem="I82-Ry-zcM" firstAttribute="leading" secondItem="GqV-sO-zka" secondAttribute="leading" constant="20" id="qkb-kx-1hg"/>
+                            <constraint firstItem="HpO-a6-s1j" firstAttribute="trailing" secondItem="GqV-sO-zka" secondAttribute="trailing" id="uOp-vh-qK9"/>
+                            <constraint firstItem="HpO-a6-s1j" firstAttribute="leading" secondItem="GqV-sO-zka" secondAttribute="leading" id="uZz-yr-s2u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="38e-cs-AMA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYf-J0-L6F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3404" y="777"/>
+        </scene>
+        <!--Pokemon View Controller-->
+        <scene sceneID="Yc5-96-nJ7">
+            <objects>
+                <viewController storyboardIdentifier="PokemonViewController" id="2Fm-gc-ZXF" customClass="PokemonViewController" customModule="iosEval2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oD1-ov-z5u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Bd-Ai-wWP">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VIi-nX-Spq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Bd-Ai-wWP" firstAttribute="top" secondItem="VIi-nX-Spq" secondAttribute="top" id="30H-q8-OKL"/>
+                            <constraint firstItem="VIi-nX-Spq" firstAttribute="trailing" secondItem="7Bd-Ai-wWP" secondAttribute="trailing" id="D5s-hN-JEI"/>
+                            <constraint firstItem="VIi-nX-Spq" firstAttribute="bottom" secondItem="7Bd-Ai-wWP" secondAttribute="bottom" id="PGO-Qv-q1P"/>
+                            <constraint firstItem="7Bd-Ai-wWP" firstAttribute="leading" secondItem="VIi-nX-Spq" secondAttribute="leading" id="TpW-ai-68A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zqx-DO-cqw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeC-Wc-cMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3484" y="19"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="KBg-TY-L9L">
+            <objects>
+                <tabBarController id="20o-1N-Jdt" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LFL-ko-P0Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="T7W-4m-60g" kind="relationship" relationship="viewControllers" id="lqf-2l-hNH"/>
+                        <segue destination="uh7-eC-GgM" kind="relationship" relationship="viewControllers" id="Bl5-X2-cZp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vaS-oR-Txt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1643" y="19"/>
+        </scene>
+        <!--Pokemon-->
+        <scene sceneID="oEB-oI-mIx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T7W-4m-60g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pokemon" image="pokemon_ico" id="ka7-bA-Ydz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PH9-GF-IEe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2Fm-gc-ZXF" kind="relationship" relationship="rootViewController" id="71C-8L-Szf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yag-iM-NQj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2540.579710144928" y="19.419642857142858"/>
+        </scene>
+        <!--Picker-->
+        <scene sceneID="GQ5-ls-Kqr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uh7-eC-GgM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Picker" image="picker_ico" id="ugK-dX-s3x"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N69-YH-Lxr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HT8-oL-PuV" kind="relationship" relationship="rootViewController" id="YoG-gr-LAp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Cn-xp-AWa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2541" y="777"/>
+        </scene>
     </scenes>
     <resources>
         <image name="facebook_ico" width="55" height="55"/>
         <image name="google_ico" width="55" height="55"/>
         <image name="header_pokemon" width="711" height="256"/>
+        <image name="picker_ico" width="25" height="25"/>
+        <image name="pokemon_ico" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

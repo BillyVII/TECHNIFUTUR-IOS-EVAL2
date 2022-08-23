@@ -14,25 +14,35 @@ class ConnectionViewController: UIViewController {
     @IBOutlet var mdpTextField: UITextField!
     
     var verification: String?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         if verification == "Facebook"{
             imageHeader.image = UIImage(named: "facebook_header")
         }
         else {
             imageHeader.image = UIImage(named: "google_header" )
         }
-
-       
+        
+        
     }
     @IBAction func didTapOnCloseButton(_ sender: Any) {
         dismiss(animated: true)
     }
     
     @IBAction func didTapOnConnectionButton(_ sender: Any) {
+        // verifier l'email et le password
         
-        // Attention Regex
+        
+        if let pokemonViewController =
+            storyboard?.instantiateViewController(withIdentifier: "PokemonViewController") as? PokemonViewController {
+            pokemonViewController.modalPresentationStyle = .fullScreen
+            present(pokemonViewController, animated: true, completion: nil)
+        }
+            
+            
+        
     }
 }
+
