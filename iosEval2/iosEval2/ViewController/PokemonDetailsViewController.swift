@@ -1,5 +1,5 @@
 //
-//  PokemonTabBarVCViewController.swift
+//  PokemonDetailsViewController.swift
 //  iosEval2
 //
 //  Created by Student09 on 24/08/2022.
@@ -7,10 +7,18 @@
 
 import UIKit
 
-class PokemonTabBarVCViewController: UITabBarController {
+class PokemonDetailsViewController: UIViewController {
     
-    static let identifier = "PokemonTabBarVC"
-
+    static let identifier = "PokemonDetailsViewController"
+   
+    @IBOutlet weak var imagePokemon: UIImageView!
+    @IBOutlet weak var namePokemon: UILabel!
+    @IBOutlet weak var typePokemon: UILabel!
+    @IBOutlet weak var heightPokemon: UILabel!
+    @IBOutlet weak var genPokemon: UILabel!
+    
+    var pokemon: Pokemon!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

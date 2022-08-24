@@ -19,7 +19,7 @@ class ConnectionViewController: UIViewController {
         super.viewDidLoad()
         
         if verification == "Facebook"{
-            imageHeader.image = UIImage(named: "facebook_header")
+            imageHeader.image = UIImage(named: "faceook_header")
         }
         else {
             imageHeader.image = UIImage(named: "google_header" )
@@ -33,16 +33,22 @@ class ConnectionViewController: UIViewController {
     
     @IBAction func didTapOnConnectionButton(_ sender: Any) {
         // verifier l'email et le password
+        let login = NSPredicate(format: "SELF MATCHES %@", "[a-zA-Z]+@+[a-zA-Z]+.+[a-zA-Z]{2,64}")
+        let mdp = NSPredicate(format: "SELF MATCHES %@", "[a-zA-Z]{2,64}")
         
-        
-        if let pokemonViewController =
-            storyboard?.instantiateViewController(withIdentifier: "PokemonViewController") as? PokemonViewController {
-            pokemonViewController.modalPresentationStyle = .fullScreen
-            present(pokemonViewController, animated: true, completion: nil)
+        if login.evaluate(with: loginTextField.text) && mdp.evaluate(with:mdpTextField.text){
+            
+            if let pokemonViewController =
+                storyboard?.instantiateViewController(withIdentifier: "PokemonTabBarVCViewController") as? PokemonTabBarVCViewController{
+                pokemonViewController.modalPresentationStyle = .fullScreen
+                present(pokemonViewController, animated: true, completion: nil)
+            }
         }
-            
-            
-        
-    }
+        else {
+            let alert = UIAlertController(title: "ERROR", message: "Login and/or email invalide", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+   }
 }
 

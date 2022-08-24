@@ -8,6 +8,9 @@
 import UIKit
 
 class PokemonTableViewCell: UITableViewCell {
+    static let identifier = "PokemonTableViewCell"
+    @IBOutlet var pokemonName : UILabel!
+    @IBOutlet var imagePokemon: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,5 +22,8 @@ class PokemonTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-}
+    func setUpCell(pokemon:Pokemon){
+        pokemonName.text = pokemon.name
+        imagePokemon.image = UIImage(named:pokemon.imageName)
+        
+    }}

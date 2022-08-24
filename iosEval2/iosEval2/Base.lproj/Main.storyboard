@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="20o-1N-Jdt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -46,7 +46,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="ioI-NG-kgU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="15" id="7uC-cG-7v5"/>
                             <constraint firstItem="ioI-NG-kgU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N8R-NN-s4e"/>
@@ -150,13 +150,13 @@
                                 <rect key="frame" x="0.0" y="188" width="414" height="216"/>
                             </pickerView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I82-Ry-zcM">
-                                <rect key="frame" x="20" y="454" width="374" height="300"/>
+                                <rect key="frame" x="20" y="454" width="374" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="Z7R-zy-so4"/>
+                                    <constraint firstAttribute="height" constant="200" id="Z7R-zy-so4"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE6-16-SBj">
-                                <rect key="frame" x="169.5" y="794" width="75.5" height="21"/>
+                                <rect key="frame" x="169.5" y="694" width="75.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -176,10 +176,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="38e-cs-AMA"/>
+                    <connections>
+                        <outlet property="mImageView" destination="I82-Ry-zcM" id="Eog-RA-fw5"/>
+                        <outlet property="pokemonPicker" destination="HpO-a6-s1j" id="8J9-78-0Li"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYf-J0-L6F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3404" y="777"/>
+            <point key="canvasLocation" x="3417" y="828"/>
         </scene>
         <!--Pokemon View Controller-->
         <scene sceneID="Yc5-96-nJ7">
@@ -210,12 +214,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeC-Wc-cMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3484" y="19"/>
+            <point key="canvasLocation" x="3481" y="84"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Pokemon Details View Controller-->
+        <scene sceneID="rSq-W9-rkR">
+            <objects>
+                <viewController storyboardIdentifier="pokemonDetailsViewController" id="m2E-sQ-rWM" customClass="PokemonDetailsViewController" customModule="iosEval2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y3l-4q-lid">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulbizarre" translatesAutoresizingMaskIntoConstraints="NO" id="3is-Kh-sMw">
+                                <rect key="frame" x="10" y="64" width="394" height="237"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bq-jn-81v">
+                                <rect key="frame" x="147" y="376" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smr-9y-Tpc">
+                                <rect key="frame" x="20" y="470" width="37.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9a-Uq-HaC">
+                                <rect key="frame" x="20" y="526" width="50.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHo-91-nES">
+                                <rect key="frame" x="20" y="582" width="31.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="obd-Db-Yga"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l9a-Uq-HaC" firstAttribute="top" secondItem="smr-9y-Tpc" secondAttribute="bottom" constant="35" id="0X8-c8-j7l"/>
+                            <constraint firstItem="obd-Db-Yga" firstAttribute="trailing" secondItem="3is-Kh-sMw" secondAttribute="trailing" constant="10" id="0ih-8Y-QU4"/>
+                            <constraint firstItem="3is-Kh-sMw" firstAttribute="centerX" secondItem="y3l-4q-lid" secondAttribute="centerX" id="4Wk-kV-LA6"/>
+                            <constraint firstItem="smr-9y-Tpc" firstAttribute="top" secondItem="4bq-jn-81v" secondAttribute="bottom" constant="73" id="GD0-a9-Z3v"/>
+                            <constraint firstItem="l9a-Uq-HaC" firstAttribute="leading" secondItem="obd-Db-Yga" secondAttribute="leading" constant="20" id="Gdr-VQ-hDd"/>
+                            <constraint firstItem="4bq-jn-81v" firstAttribute="centerX" secondItem="y3l-4q-lid" secondAttribute="centerX" id="OMe-QK-7pd"/>
+                            <constraint firstItem="smr-9y-Tpc" firstAttribute="leading" secondItem="obd-Db-Yga" secondAttribute="leading" constant="20" id="OTU-rw-vzo"/>
+                            <constraint firstItem="3is-Kh-sMw" firstAttribute="top" secondItem="obd-Db-Yga" secondAttribute="top" constant="20" id="PEs-dZ-oey"/>
+                            <constraint firstItem="4bq-jn-81v" firstAttribute="top" secondItem="3is-Kh-sMw" secondAttribute="bottom" constant="75" id="bzL-Ug-9lz"/>
+                            <constraint firstItem="wHo-91-nES" firstAttribute="leading" secondItem="obd-Db-Yga" secondAttribute="leading" constant="20" id="eNQ-r0-bqs"/>
+                            <constraint firstItem="wHo-91-nES" firstAttribute="top" secondItem="l9a-Uq-HaC" secondAttribute="bottom" constant="35" id="m9x-ma-UWO"/>
+                            <constraint firstItem="3is-Kh-sMw" firstAttribute="leading" secondItem="obd-Db-Yga" secondAttribute="leading" constant="10" id="pfb-ev-UE1"/>
+                            <constraint firstItem="obd-Db-Yga" firstAttribute="bottom" secondItem="3is-Kh-sMw" secondAttribute="bottom" constant="561" id="uzs-Vq-i4W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="genPokemon" destination="wHo-91-nES" id="MEt-Ge-PSu"/>
+                        <outlet property="heightPokemon" destination="l9a-Uq-HaC" id="glA-Fz-wcI"/>
+                        <outlet property="imagePokemon" destination="3is-Kh-sMw" id="lK9-WR-8We"/>
+                        <outlet property="namePokemon" destination="4bq-jn-81v" id="DQa-9j-5rM"/>
+                        <outlet property="typePokemon" destination="smr-9y-Tpc" id="WFL-vx-rlW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3r-da-g69" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4266" y="89"/>
+        </scene>
+        <!--Pokemon Tab BarVC View Controller-->
         <scene sceneID="KBg-TY-L9L">
             <objects>
-                <tabBarController id="20o-1N-Jdt" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="PokemonTabBarVCViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="20o-1N-Jdt" customClass="PokemonTabBarVCViewController" customModule="iosEval2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LFL-ko-P0Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -228,12 +298,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vaS-oR-Txt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1643" y="19"/>
+            <point key="canvasLocation" x="1657" y="84"/>
         </scene>
         <!--Pokemon-->
         <scene sceneID="oEB-oI-mIx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T7W-4m-60g" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationControllerVC" automaticallyAdjustsScrollViewInsets="NO" id="T7W-4m-60g" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Pokemon" image="pokemon_ico" id="ka7-bA-Ydz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PH9-GF-IEe">
@@ -247,7 +317,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yag-iM-NQj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2540.579710144928" y="19.419642857142858"/>
+            <point key="canvasLocation" x="2541" y="84"/>
         </scene>
         <!--Picker-->
         <scene sceneID="GQ5-ls-Kqr">
@@ -266,15 +336,19 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Cn-xp-AWa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2541" y="777"/>
+            <point key="canvasLocation" x="2541" y="828"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Bulbizarre" width="500" height="466"/>
         <image name="facebook_ico" width="55" height="55"/>
         <image name="google_ico" width="55" height="55"/>
         <image name="header_pokemon" width="711" height="256"/>
         <image name="picker_ico" width="25" height="25"/>
         <image name="pokemon_ico" width="25" height="25"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

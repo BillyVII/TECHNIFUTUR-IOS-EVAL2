@@ -10,7 +10,7 @@ import UIKit
 
 struct Pokemon {
     var name: String
-    var imageName: UIImage
+    var imageName: String
     var generation: Int
     var pokedexNumber: Int
     var height: Int
